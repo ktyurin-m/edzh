@@ -1,0 +1,59 @@
+\documentclass[a4paper,14pt]{extarticle}
+%%% Работа с русским языком
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в фомулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+\usepackage[unicode, pdftex]{hyperref}
+% \usepackage[unicode=true]{hyperref}
+%%% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+\usepackage{graphicx}%Вставка картинок правильная
+
+\usepackage{float}%"Плавающие" картинки
+
+\usepackage{wrapfig}%Обтекание фигур (таблиц, картинок и прочего)
+%% Номера формул
+\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+\usepackage{subcaption} 
+\usepackage{tabularx}
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
+\captionsetup[figure]{labelsep = period}
+% \usepackage{indentfirst}
+
+\usepackage{listings}
+\lstset{
+    extendedchars=\true,
+    commentstyle=\itshape,
+    stringstyle=\bfseries,
+    keepspaces=true,
+  escapechar=\%,
+  texcl=true
+  showstringspaces=false,
+  numbers=left,
+  breaklines,
+  columns=fullflexible,
+  flexiblecolumns,
+  numberstyle={\footnotesize},
+  frame=tb
+}
+% \renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
+%Задание параметров страницы
+% в преамбуле
+% \usepackage[a4paper, mag=1000, left=2.5cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm]{geometry}
+\usepackage[left=3cm, right=1cm, top=2cm, bottom=2cm]{geometry}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{caption}    
+\usepackage{subcaption}       
+\renewcommand{\thesubfigure}{\asbuk{subfigure}}           % Буквенные номера подрисунков
+\captionsetup[subfigure]{font={normalsize},               % Шрифт подписи названий подрисунков (не отличается от основного)
+    labelformat=brace,                                    % Формат обозначения подрисунка
+    justification=centering,                              % Выключка подписей (форматирование), один из вариантов            
+}
+\numberwithin{equation}{section}
+
+
